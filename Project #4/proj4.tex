@@ -1,0 +1,89 @@
+\documentclass[a4paper, 11pt]{article}
+
+%     ITY 2020/2021 Project #4     %
+% By Aleksandr Verevkin (xverev00) %
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm, top=3cm, text={17cm, 24cm}]{geometry}
+\usepackage{times}
+\usepackage[unicode]{hyperref}
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+\Huge
+\textsc{Vysoké učení technické v~Brně}\\
+\huge
+\textsc{Fakulta informačních technologií}\\
+\vspace{\stretch{0.382}}
+\LARGE
+Typografie a publikování\,--\,4. projekt\\
+\Huge
+Bibliografické citace\\
+\vspace{\stretch{0.618}}
+\end{center}
+{\Large \today \hfill Aleksandr Verevkin}
+
+\end{titlepage}
+
+\section{Úvod}
+Typografie je nauka zabývající se písmem, jeho výběrem, použitím a sazbou. 
+Je také souborem pravidel, které napomáhají dosažení cíle.
+Někteří označují typografii nikoli pouze za nauku či metodu, ale také za umění, jak správně 
+pracovat s~jednotlivými typy fontů, velikostí písma, řádkování, rozestupy mezi jednotlivými 
+znaky, či uspořádaní písma. Článek \cite{TypografieArticle} uvádí o~vizualizace dat pomocí typografie.
+
+\section{Úvod do \TeX u}
+\TeX\ je značkovací jazyk vytvořený Donaldem Knuthem pro atraktivní a konzistentní sazbu dokumentů.
+Je to také programovací jazyk v~tom smyslu, že podporuje konstrukci if-else, dokáže vypočítat atd.
+Díky ovládacímu prvku \TeX\ je velmi výkonný, ale také obtížný a časově náročný na použití,
+viz \cite{book2006}.
+
+\LaTeX\ představuje nadstavbu \TeX u o~balíčky předdefinovaných maker, 
+která usnadňují a zpřístupňují složitý jazyk \TeX u pro sazbu dokumentů širšímu spektru uživatelů.
+O~tom co je \TeX\ a co není pojednává \cite{onlineFEKT}.
+
+\section{Editory, nástroje}
+\begin{itemize}
+    \item Kile, Vim, Emacs(Linux)
+    \item WinEdt, WinTeX, Ultra Edit(Windows)
+    \item Overleaf(Online)
+    \item Více o~editorech je \cite{onlineFIT}.
+\end{itemize}
+O~převod dokumentů z~aplikace Word do \LaTeX u věnuje \cite{WorkSimek}.
+
+\section{Základy \LaTeX ového souboru}
+\LaTeX ový soubor obsahuje zdrojový text, který má být zpracován k~vytvoření tištěného výstupu.
+Rozdělení textu na řádky stejné šířky, formátování do odstavců a rozdělení na stránky s~čísly 
+stránek a běžícími hlavami jsou všechny funkce zpracovatelského programu, 
+nikoli samotného vstupního textu, viz \cite{book2003}.
+
+\section{Fonty}
+Plain\TeX\ má načtenu rodinu fontů Computer Modern a CSplain má zavedenu víceméně
+stejnou rodinu fontů zvanou CSfonty. Ta rozšiřuje tabulku znaků Computer Modern fontů
+o~znaky české a slovenské abecedy. 
+Chcete-li změnit typ písma dokumentu, je třeba přidat jednoduchý řádek:
+\verb|\usepackage{font}|, 
+typy písma lze najít \cite{OnlineOverleaf}.
+
+Více o~fontech \cite{FullArticle}.
+
+\section{Sazba matematických vzorců}
+Základními matematickými prostředími jsou řádkové rovnice a samostatné rovnice. 
+Od textu je odděluje symbol \$ v~případě řádkového prostředí, 
+resp. \verb|\[|\dots\verb|\]| v~případě samostatné rovnice. 
+Alternativně se často používá k~oddělování matematických symbolů \verb|\(|\dots\verb|\)|, \$\$ \dots \$\$. 
+Více o~matematické sazbě \cite{WorkHolan}.
+
+Existují i zařízení pro převod matematických textů z~ručně psaných textů \cite{MathArticle}.
+
+\pagebreak
+
+\bibliographystyle{czechiso}
+\renewcommand{\refname}{Literatura}
+\bibliography{proj4}
+
+\end{document}
